@@ -16,6 +16,7 @@ markupsafe==1.1.1
 ncurses==6.1
 openssl==1.1.1c
 pip==19.2.3
+python==3.7.3
 readline==8.0
 setuptools==41.2.0
 sqlite==3.29.0
