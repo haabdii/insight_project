@@ -1,0 +1,53 @@
+<html>
+
+  <head>
+    <title>Court Report</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Court Report</h1>
+      
+      <form method='POST' action='/'>
+        <div class="form-group">
+          <input type="text" name="age" placeholder="Enter age" style="max-width: 300px;" autofocus required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="weight" placeholder="Enter weight (kg)" style="max-width: 300px;" autofocus required>
+          <input type="text" name="height" placeholder="Enter height (cm)" style="max-width: 300px;" autofocus required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="dob" placeholder="Enter date of birth" style="max-width: 300px;" autofocus required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="start" placeholder="Enter start year" style="max-width: 300px;" autofocus required>
+        </div>
+
+        <div class="form-group">
+            Enter past injuries:
+          <input type="checkbox" name="2016" value="1">2016
+          <input type="checkbox" name="2017" value="1">2017
+          <input type="checkbox" name="2018" value="1">2018
+        </div>
+
+    
+        <select name="position">
+		<option value="forward">Forward</option>
+		<option value="guard">Guard</option>
+		<option value="center">Center</option>
+	</select>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      Cost of Injury:
+      {{ output }}
+
+      <br>
+    </div>
+  </body>
+</html>
+
