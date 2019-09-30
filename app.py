@@ -25,7 +25,7 @@ def index():
         #model = pickle.load(open("model.pickle", "rb"))
         #output = model.predict(X)
         #output = int(age) + int(height)
-        output = 0.61
+        output = 0.41
 
     return render_template('index.html', output=output)
 
