@@ -17,6 +17,7 @@ def index():
         dob = dict(request.form)["dob"]
         position = dict(request.form)["position"]
         start = dict(request.form)["start"]
+        
         #print(dict(request.form)["2016"])
         #print(dict(request.form)["2017"])
         #year_2018 = dict(request.form)["2018"]
