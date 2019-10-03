@@ -46,6 +46,12 @@
         </div>
         
         <br>
+        
+        <div class="form-group">
+            <input type="text" name="salary" placeholder="Enter salary ($1M)" style="max-width: 300px; font-size: 15pt" autofocus required>
+        </div>
+        
+        <br>
 
     
         <select name="position" style="max-width: 300px; font-size: 15pt">
@@ -65,9 +71,22 @@
 
       <font size="5">
       Risk of Injury:
-      {{ output }}
+      {{ output[0] }}
 
       <br>
+      
+      <font size="5">
+      Cost:
+      {{ output[1] }}
+      
+      <br>
+      
+      <font size="5">
+      Value:
+      {{ output[2] }}
+      
+      <br>
+      
     </div>
   </body>
 </html>

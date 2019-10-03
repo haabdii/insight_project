@@ -7,7 +7,9 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     
-    output = None
+    risk = None
+    cost = None
+    value = None
     
     if request.method == "POST":
         # get url that the user has entered
@@ -16,6 +18,7 @@ def index():
         weight = dict(request.form)["weight"]
         dob = dict(request.form)["dob"]
         age = 2011 - int(dob)
+        salary = dict(request.form)["salary"]
         position = dict(request.form)["position"]
         start = dict(request.form)["start"]
         if int(start) >= 2011:
@@ -54,11 +57,12 @@ def index():
               played[0], played[1], played[2], played[3], played[4], played[5], \
               played[6], played[7], played[8]]]
 
-        output = round(model.predict_proba(x)[0][1], 2)
-        #output = 0.55
+        risk = round(model.predict_proba(x)[0][1] * 0.85, 2)
+        cost = round(risk * int(salary), 2)
+        value = round(int(salary) - cost, 2)
 
 
-    return render_template('index.html', output=output)
+    return render_template('index.html', output=[risk, cost, value])
 
 if __name__ == '__main__':
     app.run()
