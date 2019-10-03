@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import pickle
+#import sklearn
 
 app = Flask(__name__)
 
@@ -45,7 +46,7 @@ def index():
             G_position = 1
     
         # Load model
-        #model = pickle.load(open("model.pickle", "rb"))
+        model = pickle.load(open("model.pickle", "rb"))
         
         x = [[int(height), int(weight), G_position, F_position, C_position, \
               years_played_before_2011, age, int(year_11), int(year_12), int(year_13), \
@@ -53,8 +54,8 @@ def index():
               played[0], played[1], played[2], played[3], played[4], played[5], \
               played[6], played[7], played[8]]]
 
-        #output = round(model.predict_proba(x)[0][1], 2)
-        output = 0.55
+        output = round(model.predict_proba(x)[0][1], 2)
+        #output = 0.55
 
 
     return render_template('index.html', output=output)
