@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 import pickle
-#import sklearn
 
 app = Flask(__name__)
 
@@ -8,8 +7,6 @@ app = Flask(__name__)
 def index():
     
     risk = None
-    cost = None
-    value = None
     
     if request.method == "POST":
         # get url that the user has entered
@@ -18,7 +15,6 @@ def index():
         weight = dict(request.form)["weight"]
         dob = dict(request.form)["dob"]
         age = 2011 - int(dob)
-        salary = dict(request.form)["salary"]
         position = dict(request.form)["position"]
         start = dict(request.form)["start"]
         if int(start) >= 2011:
@@ -58,11 +54,9 @@ def index():
               played[6], played[7], played[8]]]
 
         risk = round(model.predict_proba(x)[0][1] * 0.85, 2)
-        cost = round(risk * int(salary), 2)
-        value = round(int(salary) - cost, 2)
 
 
-    return render_template('index.html', output=[risk, cost, value])
+    return render_template('index.html', output= risk)
 
 if __name__ == '__main__':
     app.run()
