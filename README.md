@@ -4,4 +4,6 @@ This reposetory includes all the files I created to build a web app on Heroku as
 
 The web app can be found at: https://court-report.herokuapp.com/
 
-The code is presented in a jupyter notebook: NBA_injuries_prediction.ipynb 
+The code is presented in the following jupyter notebook: NBA_injuries_prediction.ipynb 
+
+FinalDemo.pdf is the pdf version of the project presentation  
