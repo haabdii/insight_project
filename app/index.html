@@ -1,0 +1,74 @@
+<html>
+
+  <head>
+    <title>Court Report</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Court Report</h1>
+      
+      <form method='POST' action='/'>
+          
+          <font size="5">
+        <div class="form-group">
+          <input type="text" name="weight" placeholder="Enter weight (kg)" style="max-width: 300px; font-size: 15pt" autofocus required>
+          <input type="text" name="height" placeholder="Enter height (cm)" style="max-width: 300px; font-size: 15pt" autofocus required>
+        </div>
+        
+        <br>
+
+        <div class="form-group">
+          <input type="text" name="dob" placeholder="Enter year of birth" style="max-width: 300px; font-size: 15pt" autofocus required>
+        </div>
+        
+        <br>
+
+
+
+        <div class="form-group">
+          <input type="text" name="start" placeholder="Enter start year" style="max-width: 300px; font-size: 15pt" autofocus required>
+        </div>
+        
+        <br>
+
+        <div class="form-group">
+            Enter past injuries:
+          <input type="text" name="2011" value="0" size="1" style="max-width: 300px; font-size: 15pt"; >2011
+          <input type="text" name="2012" value="0" size="1" style="max-width: 300px; font-size: 15pt"; >2012
+          <input type="text" name="2013" value="0" size="1" style="max-width: 300px; font-size: 15pt"; >2013
+          <input type="text" name="2014" value="0" size="1" style="max-width: 300px; font-size: 15pt"; >2014
+          <input type="text" name="2015" value="0" size="1" style="max-width: 300px; font-size: 15pt"; >2015
+          <input type="text" name="2016" value="0" size="1" style="max-width: 300px; font-size: 15pt"; >2016
+          <input type="text" name="2017" value="0" size="1" style="max-width: 300px; font-size: 15pt"; >2017
+          <input type="text" name="2018" value="0" size="1" style="max-width: 300px; font-size: 15pt"; >2018
+                    
+        </div>
+        
+        <br>
+    
+        <select name="position" style="max-width: 300px; font-size: 15pt">
+		<option value="forward">Forward</option>
+		<option value="guard">Guard</option>
+		<option value="center">Center</option>
+	</select>
+        
+        <br><br>
+
+        <button type="submit" style="max-width: 300px; font-size: 15pt";>Submit</button>
+        
+        </font>
+      </form>
+      
+      <br>
+
+      <font size="5">
+      Risk of Injury:
+      {{ output }}
+
+      <br>
+      
+    </div>
+  </body>
+</html>
+
