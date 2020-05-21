@@ -8,4 +8,4 @@ The code is presented in the following jupyter notebook: NBA_injuries_prediction
 
 FinalDemo.pdf is the pdf version of the project demo.  
 
-![](insight_app/)
+![](insight_app/all_injuries.png)
