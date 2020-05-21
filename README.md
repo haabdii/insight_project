@@ -10,17 +10,46 @@ Such a tool does not exist. At least it is not publicly available. I decided to 
 
 This product is focused on knee injuries only as they are the injuries that happen with the highest frequency. For example, consider a player who weighs 100 Kg, his height is 200 cm, is born in 1990, started his career in 2015, playes the guard position and experinced one knee injury in 2016. The risk of another knee injury in 2020 for this player is 17%. One way to make sense out of this number is to run it for all of the players, then rank the players from highest to lowest risk and prioretize attention to the players with the highest risk of injury. 
 
+## Data Collection
+In order to build this product, I scarrped data from NBA databases. First, I collected all the injury reports from 2010 to 2018 from "prosportstransactions.com". Here is an example of an injury report: 
 
 
+![](Figures/lebron_james_injuries.png)
 
+I also collected data such as weight, height, date of birth, start year of career, end year of career and position on all the players who played within 2010 and 2018 timespan (~ 1000 players). Below is an example of that: 
 
+![](Figures/lebron_james_info.png)
 
-At Insight, I decided to take a shot at predicting knee injuries in NBA. I collected data including injury reports on all the players who played in NBA between 2010 and 2018 by scrapping NBA databases. I spent a lot of time understanding, cleaning, analyzing the data and engineering features. I built a web app that inputs a player's weight, height, age, position, number of years played and the history of the past knee injuries from year N-8 to year N-1 and outputs the risk of the knee injury in year N. The app's predictions are 2.5x more accurate than random guess. This reposetory includes all the files I created to build the web app on Heroku using Flask as the final deliverable of my Insight project.
+I cleaned these two datasets and joined them so I could analyze the data. 
 
-The web app can be found at: https://court-report.herokuapp.com/
+## Data Analysis 
+
+The most frequent injury in NBA is knee injury. 
+
+![](Figures/all_injuries.png)
+
+Forwards are at a higher risk of knee injuries than the players who play other positions. 
+
+![](Figures/knee_injury_position.png)
+
+One important feature that I engineered is the "total years played". It turns out that the median injured player has played four years longer than the median uninjured player. 
+
+![](Figures/number_years_played_hist.png)
+
+In addition, the history of the past injuries matter. The risk of re-injury is consistently higher than the risk of injury. If you get injured once, you are more likely to get injured again. 
+
+![](Figures/risk_injury_reinjury.png)
+
+## Modeling
+I used logistic regression to predict the risk of knee injury. It is a great option for binary classification (injured vs uninjured) and it outputs the probablity of belonging to each class. Each year the number of uninjured players were approximately 20 times the number of injured players. I upsampled the minority class to balance the dataset. Below is a simple demonstration of how the model works:
+
+![](Figures/model.png)
+
+I decided to use F-1 score as the success metric since we need to minimize both false positives and false negatives. The figure below shows that at the optimal treshhold, the logistic regression model performs 2.5x better than random guess. I would call this a great start! 
+
+![](Figures/model_performance.png)
+
+## Code
 
 The code is presented in the following jupyter notebook: NBA_injuries_prediction.ipynb 
 
-FinalDemo.pdf is the pdf version of the project demo.  
-
-![](insight_app/all_injuries.png)
