@@ -45,7 +45,7 @@ I used logistic regression to predict the risk of knee injury. It is a great opt
 
 ![](Figures/model.png)
 
-I decided to use F-1 score as the success metric since we need to minimize both false positives and false negatives. The figure below shows that at the optimal treshhold, the logistic regression model performs 2.5x better than random guess. I would call this a great start! 
+I decided to use F-1 score as the success metric since we need to minimize both the false positives and the false negatives. The figure below shows that at the optimal treshhold, the logistic regression model performs 2.5x better than random guess. I would call this a great start! 
 
 ![](Figures/model_performance.png)
 
