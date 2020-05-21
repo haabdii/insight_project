@@ -7,3 +7,5 @@ The web app can be found at: https://court-report.herokuapp.com/
 The code is presented in the following jupyter notebook: NBA_injuries_prediction.ipynb 
 
 FinalDemo.pdf is the pdf version of the project demo.  
+
+![](insight_app/)
