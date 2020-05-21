@@ -1,5 +1,5 @@
 # Predicting NBA Knee Injuries 
-At Insight, I built a simple web app for predicting knee injuries in NBA which can be found online at: https://court-report.herokuapp.com/
+At Insight, I built a simple web app for predicting knee injuries in NBA. The app can be found online at: https://court-report.herokuapp.com/
 
 ## Use Case 
 Injuries significantly lower a team's odds of success. Assume you are an NBA team manager and you have a tool that predicts the risk of injury of your players. Now, you can prepare for worst case scenarios by training backups for players at high risk of injury. You also have the option to not to hire a player who is at high risk of injury. 
