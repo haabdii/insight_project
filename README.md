@@ -6,7 +6,7 @@ Injuries significantly lower a team's odds of success. Assume you are an NBA tea
 
 Such a tool does not exist. At least it is not publicly available. I decided to make an attaempt at building such a tool. The figure below shows the first iteration of this ML based product (the first iteration is focused on knee injuries only):
 
-![](Figures/app.png)
+
 
 For example, consider a player who weighs 100 Kg, his height is 200 cm, is born in 1990, started his career in 2015 (or year N-4), playes the guard position and experinced one knee injury in 2016 (or year N-3). The risk of another knee injury in 2019 (or year N) for this player is 17%. One way to make sense out of this number is to run it for all of the players, then rank the players from highest to lowest risk and prioretize attention to the players with the highest risk of injury. 
 
