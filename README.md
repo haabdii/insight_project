@@ -49,7 +49,3 @@ I decided to use F-1 score as the success metric since we need to minimize both 
 
 ![](Figures/model_performance.png)
 
-## Code
-
-The code is presented in the following jupyter notebook: NBA_injuries_prediction.ipynb 
-
