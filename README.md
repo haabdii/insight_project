@@ -1,15 +1,11 @@
 # Predicting NBA Knee Injuries 
-At Insight, I built a simple web app for predicting knee injuries in NBA. The app can be found online at: https://court-report.herokuapp.com/
+At Insight, I built a simple ML model for predicting knee injuries in NBA. In what follows, I describe different steps of the project.
 
 ## Use Case 
-Injuries significantly lower a team's odds of success. Assume you are an NBA team manager and you have a tool that predicts the risk of injury of your players. Now, you can prepare for worst case scenarios by training backups for players at high risk of injury. You also have the option to not to hire a player who is at high risk of injury. 
-
-Such a tool does not exist. At least it is not publicly available. I decided to make an attaempt at building such a tool. The figure below shows the first iteration of this ML based product (the first iteration is focused on knee injuries only):
-
-For example, consider a player who weighs 100 Kg, his height is 200 cm, was born in 1990, started his career in 2015 (or year N-4), plays the guard position and experinced one knee injury in 2016 (or year N-3). The risk of another knee injury in 2019 (or year N) for this player is 17%. One way to make sense out of this number is to run it for all of the players, then rank the players from highest to lowest risk and prioretize attention to the players with the highest risk of injury. 
+Injuries significantly lower a team's odds of success. Assume you are an NBA team manager and you have a tool that predicts the risk of injury of your players. Now, you can prepare for worst case scenarios by training backups for players at high risk of injury. You also have the option to not to hire a player who is at high risk of injury. At Insigt, I decided to take a shot at building a ML model for predicting knee injuries (i.e. most common injury in NBA). As we only had three weeks to complete the project, my goal was beating random guess. 
 
 ## Data Collection
-In order to build this product, I scarrped data from NBA databases. First, I collected all the injury reports from 2010 to 2018 from "prosportstransactions.com". Here is an example of an injury report: 
+I scarrped data from NBA databases. First, I collected all the injury reports from 2010 to 2018 from "prosportstransactions.com". Here is an example of an injury report: 
 
 
 ![](Figures/lebron_james_injuries.png)
@@ -30,7 +26,7 @@ Forwards are at a higher risk of knee injuries than the players who play other p
 
 ![](Figures/knee_injury_position.png)
 
-One important feature that I engineered is the "total years played". It turns out that the median injured player has played four years longer than the median uninjured player. 
+One important feature is the "total years played". It turns out that the median injured player has played four years longer than the median uninjured player. 
 
 ![](Figures/number_years_played_hist.png)
 
