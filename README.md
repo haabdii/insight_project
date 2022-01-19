@@ -2,7 +2,7 @@
 At Insight, I built a simple ML model for predicting knee injuries in NBA. In what follows, I describe different steps of the project.
 
 ## Use Case 
-Injuries significantly lower a team's odds of success. Assume you are an NBA team manager and you have a tool that predicts the risk of injury of your players. Now, you can prepare for worst case scenarios by training backups for players at high risk of injury. You also have the option to not to hire a player who is at high risk of injury. At Insigt, I decided to take a shot at building a ML model for predicting knee injuries (i.e. most common injury in NBA). As we only had three weeks to complete the project, my goal was beating random guess. 
+Injuries significantly lower a team's odds of success. Assume you are an NBA team manager and you have a tool that predicts the risk of injury of your players. Now, you can prepare for worst case scenarios by training backups for players at high risk of injury. You also have the option to not to hire a player who is at high risk of injury. At Insigt, I decided to take a shot at building a ML model for predicting knee injuries (i.e. most common injury in NBA). For the first iteration of the model, my goal was to beat random guess. 
 
 ## Data Collection
 I scarrped data from NBA databases. First, I collected all the injury reports from 2010 to 2018 from "prosportstransactions.com". Here is an example of an injury report: 
