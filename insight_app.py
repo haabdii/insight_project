@@ -54,7 +54,7 @@ x, y = oversample.fit_resample(x, y)
 
 # Training the model
         
-model = LogisticRegression(solver = 'lbfgs')
+model = LogisticRegression()
 model.fit(x, y)
 
 # inputs from the user 
