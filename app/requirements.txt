@@ -3,6 +3,6 @@
 # platform: osx-64
 flask==1.0.2
 gunicorn==19.8.1
-jinja2==2.10.1
+jinja2==2.11.3
 pip==19.2.3
 scikit-learn==0.21.2
